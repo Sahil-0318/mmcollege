@@ -1,0 +1,125 @@
+<%- include('partials/header') %>
+
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+
+    <!-- Sidebar Start -->
+    <%- include('partials/AdminSidebar') %>
+    <!--  Sidebar End -->
+    
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <%- include('partials/appHeader') %>
+      <!--  Header End -->
+      <div class="container-fluid">
+        <section class="section">
+          <h3 class="mb-3">BCA Admission Forms</h3>
+            <div class="row">
+              <% if (locals.list) { %> <% list.forEach((element, i)=> { %>
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="row align-items-start card-body">
+                    <h5 class="card-title">Form No. <%= i+1 %></h5>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">1. Full Name :</p>
+                      <p><%= element.fullName %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">2. Registration Number :</p>
+                      <p><%= element.registrationNumber %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">3. Current Year :</p>
+                      <p><%= element.currentYear %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">4. AadharNumber :</p>
+                      <p><%= element.aadharNumber %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">5. Date Of Birth :</p>
+                      <p><%= element.dOB %></p>
+                    </div>
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">6. Gender :</p>
+                      <p><%= element.gender %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">7. Nationality :</p>
+                      <p><%= element.nationality %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">8. Religion :</p>
+                      <p><%= element.religion %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">9. Caste :</p>
+                      <p><%= element.caste %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">10. Father's Name :</p>
+                      <p><%= element.fatherName %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">11. Mother's Name :</p>
+                      <p><%= element.motherName %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">12. Parmanent Address :</p>
+                      <p><%= element.parmanentAddress %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">Parmanent Add. Pin :</p>
+                      <p><%= element.parmanentAddressPin %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">13. Present Address :</p>
+                      <p><%= element.presentAddress %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">Present Add. Pin :</p>
+                      <p><%= element.presentAddressPin %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">14. Mobile Number :</p>
+                      <p><%= element.mobileNumber %></p>
+                    </div>
+    
+                    <div class="col-md-4 mb-2 d-flex" style="gap: 10px">
+                      <p class="fw-semibold">15. Email :</p>
+                      <p><%= element.email %></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% }); %> <% } %>
+            </div>
+          </section>
+      </div>
+    </div>
+  </div>
+  <script src="src/assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="src/assets/js/sidebarmenu.js"></script>
+  <script src="src/assets/js/app.min.js"></script>
+  <script src="src/assets/libs/simplebar/dist/simplebar.js"></script>
+</body>
+
+</html>
